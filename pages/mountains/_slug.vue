@@ -10,8 +10,8 @@
 </template>
 <script>
 export default {
-  async asyncData({ $axios, params }) {
-    const mountain = await $axios.$get(
+  async asyncData({ $http, params }) {
+    const mountain = await $http.$get(
       `https://api.nuxtjs.dev/mountains/${params.slug}`
     )
     return { mountain }

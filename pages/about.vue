@@ -1,7 +1,7 @@
 <template>
-<div>
+<div class='about'>
 
-  <article>
+  <article class='title'>
     This is about page
   </article>
 </div>
@@ -13,6 +13,10 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang='less' scoped >
+.about{
+  .title{
+    font-size: 40px;
+  }
+}
 </style>

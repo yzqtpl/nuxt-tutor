@@ -1,4 +1,7 @@
 export default {
+
+
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   server: {
@@ -34,7 +37,10 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  //https://vite.nuxtjs.org
+  buildModules: [
+    'nuxt-vite'
+  ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
