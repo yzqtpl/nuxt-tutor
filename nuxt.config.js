@@ -1,12 +1,14 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  server: {
+    port: '3500'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-tutor',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'zh'
     },
     meta: [
       { charset: 'utf-8' },
@@ -32,13 +34,14 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
+  buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+// https://content.nuxtjs.org/
+    '@nuxt/content'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -46,6 +49,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/],
+    transpile: [/^element-ui/]
   }
 }
