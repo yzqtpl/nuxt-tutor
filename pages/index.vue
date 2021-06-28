@@ -10,35 +10,42 @@
       </div>
       <article>
         <span>{{ names }}</span>
-        <article>{{user}}</article>
+        <article>{{ user }}</article>
       </article>
+      <article v-for='item in mountains'><img :src='item.image' />{{ item.title }}</article>
     </div>
   </div>
 </template>
 
 <script>
-import { mapMutations ,mapState} from 'vuex'
+import { mapMutations, mapActions, mapState } from 'vuex'
 
 export default {
   mounted() {
-    this.addNames('aaaaaaa')
+    // this.addNames('aaaaaaa')
+    // this.setMon( 'a')
   },
   computed: {
     names() {
       return this.$store.state.names
     },
+    mountains() {
+      return this.$store.state.mountains
+    },
     ...mapState(['user'])
   },
   methods: {
     ...mapMutations({
-      addNames: 'addNames'
+      addNames: 'addNames',
+      setMon: 'setMountains'
     })
+
   }
 
 }
 </script>
 
-<style  >
+<style>
 .container {
   margin: 0 auto;
   min-height: 100vh;
