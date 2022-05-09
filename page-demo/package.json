@@ -1,0 +1,15 @@
+{
+  "name": "page-demo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "start": "nuxi preview"
+  },
+  "devDependencies": {
+    "@nuxt/ui": "^0.1.0",
+    "nuxt": "rc",
+    "element-plus": "latest"
+  }
+}

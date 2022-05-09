@@ -1,12 +1,13 @@
-export default {
+import { defineNuxtConfig } from 'nuxt'
+
+export default defineNuxtConfig({
 
 
-// ssr:true,
-  vite: { ssr: true },
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   server: {
-    port: '3500'
+
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -26,31 +27,21 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-plus/dist/index.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  //https://vite.nuxtjs.org
-  buildModules: [
-    'nuxt-vite'
-  ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
-    // '@nuxtjs/axios',
-    //https://http.nuxtjs.org/setup
-    '@nuxt/http',
-// https://content.nuxtjs.org/
-    '@nuxt/content'
+
+
   ],
   http: {
     // proxyHeaders: false
@@ -60,6 +51,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/^element-ui/]
+    transpile: [/^element-plus/]
   }
-}
+})

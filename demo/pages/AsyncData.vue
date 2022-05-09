@@ -13,14 +13,12 @@
 </div>
 </template>
 
-<script>
-export default {
-  name: 'AsyncData',
-  async asyncData({ $http }) {
-    const mountains = await $http.$get('https://api.nuxtjs.dev/mountains')
-    return { mountains }
-  }
-}
+<script setup>
+import { useFetch } from 'nuxt/app'
+
+let mountains=useFetch('https://api.nuxtjs.dev/mountains')
+
+
 </script>
 
 <style scoped>

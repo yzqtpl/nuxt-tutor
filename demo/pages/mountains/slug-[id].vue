@@ -8,20 +8,19 @@
     <el-button type='primary' @click='goBack'>Back</el-button>
   </article>
 </template>
-<script>
-export default {
-  async asyncData({ $http, params }) {
-    const mountain = await $http.$get(
-      `https://api.nuxtjs.dev/mountains/${params.slug}`
-    )
-    return { mountain }
-  },
-  methods: {
-    goBack() {
+<script setup>
+import { useFetch, useRoute } from 'nuxt/app'
+let route=useRoute()
+let slug=useState('slug',() => {
+  return 0
+})
+let mountain = useFetch(
+  `https://api.nuxtjs.dev/mountains/${ slug.value}`
+)
+  function  goBack() {
       return this.$router.go(-1)
     }
-  }
-}
+
 </script>
 <style scoped>
 article {

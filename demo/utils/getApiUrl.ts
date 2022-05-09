@@ -1,4 +1,4 @@
-export const getApiUrl = (str) => {
+export const getApiUrl = (str='') => {
   const devArr = ["test.researchstar.cn", "localhost"];
   const apiArr = ["www.researchstar.cn"];
   let localUrl = "192.168.";
